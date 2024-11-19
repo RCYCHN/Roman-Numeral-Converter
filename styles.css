@@ -1,3 +1,25 @@
+@font-face {
+    font-family: Atlantico;
+    src: url(Fonts/Atlantico.otf);
+}
+@font-face {
+    font-family: Nohemi-Bold;
+    src: url(Fonts/Nohemi/OpenType-TT/Nohemi-Bold.ttf)
+}
+@font-face {
+    font-family: Nohemi-SemiBold;
+    src: url(Fonts/Nohemi/OpenType-TT/Nohemi-SemiBold.ttf)
+}
+@font-face {
+    font-family: Nohemi-Regular;
+    src: url(Fonts/Nohemi/OpenType-TT/Nohemi-Regular.ttf);
+}
+
+@font-face {
+    font-family: Nohemi-ExtraLight;
+    src: url(Fonts/Nohemi/OpenType-TT/Nohemi-ExtraLight.ttf);
+}
+
 :root {
     /* colors */
     --antiquePeach: #f4e9e0;
@@ -6,6 +28,18 @@
     --powderGrey: #94989f;
     --azureSky: #1e3d52;
     --midnightNavy: #080b19;
+
+    /* fonts */
+    --nohBold: Nohemi-Bold;
+    --nohSemBold: Nohemi-SemiBold;
+    --nohReg: Nohemi-Regular;
+    --nohExLight: Nohemi-ExtraLight;
+    --h1: 54px/70px var(--nohBold);
+    --h2: 36px/36px var(--nohBold);
+    --h3: 24px/30px var(--nohBold);
+    --links: 18px/18px var(--nohSemBold);
+    --p2: 30px/36px var(--nohReg);
+    --p: 18px/30px var(--nohExLight);
 }
 
 * {
@@ -14,10 +48,16 @@
   box-sizing: border-box;
 }
 
+h1{font: var(--h1); letter-spacing: -1.5px;}
+h2{font: var(--h3);}
+h3{font: var(--h3);}
+.links{font: var(--links);}
+.p2{font: var(--p2);}
+p{font: var(--p);}
+
 html, body {
     background-color: var(--flame);
     scroll-behavior: smooth;
-    font-family: Verdana, sans-serif;
 }
 
 body {
@@ -40,6 +80,8 @@ body {
 
 #logo {
     width: 500px;
+    position: absolute;
+    top: 10px;
 }
 
 #title {
@@ -64,13 +106,15 @@ body {
   padding: 0 15px;
   background-color: var(--antiquePeach);
   color: var(--midnightNavy);
+  text-align: center;
+  font: var(--p);
 }
 
 #convert-btn {
   padding: 10px;
   max-height: 40px;
   height: 100%;
-  font-size: 18px;
+  font: var(--links);
   position: absolute;
   top: 2.5px;
   right: 2.5px;
@@ -96,7 +140,6 @@ body {
 }
 
 #output-number {
-  font-weight: bold;
-  font-size: 20px;
+  font: var(--h2);
   color: var(--antiquePeach);
 }
