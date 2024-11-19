@@ -38,6 +38,10 @@ body {
   gap: 25px;
 }
 
+#logo {
+    width: 500px;
+}
+
 #title {
   width: 100%;
   text-align: center;
